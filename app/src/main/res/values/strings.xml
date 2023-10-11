@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Teste-Protótipo</string>
+    <string name="criando_um_app_pdf">Criando um app PDF</string>
+    <string name="editar_o_texto">Editar o Texto</string>
+</resources>
