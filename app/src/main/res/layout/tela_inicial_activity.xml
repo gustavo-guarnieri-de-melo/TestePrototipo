@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="TelaInicialActivity">
+
+        <TextView
+            android:id="@+id/Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ITech Futute"
+            android:textSize="50dp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/activity_tela_inicial_cadastros"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            android:text="CADASTROS"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo"
+            app:layout_constraintVertical_bias="0.147"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/activity_tela_inicial_pagamentos"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            android:text="PAGAMENTOS"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_notas"
+            app:layout_constraintVertical_bias="0.104"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/activity_tela_inicial_notas"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            android:text="NOTAS"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_cadastros"
+            app:layout_constraintVertical_bias="0.095"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/activity_tela_inicial_recebimentos"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="20dp"
+            android:text="RECEBIMENTOS"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_pagamentos"
+            app:layout_constraintVertical_bias="0.099"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
