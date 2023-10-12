@@ -1,10 +1,19 @@
+package br.com.alura.TestePrototipo.ui.activity
+
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import br.com.alura.TestePrototipo.ui.activity.FormularioProdutoActivity
+import androidx.datastore.preferences.core.edit
+import androidx.lifecycle.lifecycleScope
+import br.com.alura.TestePrototipo.preferences.dataStore
+import br.com.alura.TestePrototipo.preferences.usuarioLogadoPreferences
+import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.TelaInicialActivityBinding
+import kotlinx.coroutines.launch
 
-class TelaInicialActivity : AppCompatActivity() {
+class TelaInicialActivity : UsuarioBaseActivity() {
     private val binding by lazy {
         TelaInicialActivityBinding.inflate(layoutInflater)
     }
@@ -15,12 +24,30 @@ class TelaInicialActivity : AppCompatActivity() {
 
         // Configurar o OnClickListener para o botão de cadastros
         binding.activityTelaInicialCadastros.setOnClickListener {
-            vaiParaFormularioProduto()
+            vaiParaListaProdutos()
         }
     }
 
-    private fun vaiParaFormularioProduto() {
-        val intent = Intent(this, FormularioProdutoActivity::class.java)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_lista_produtos, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_lista_produtos_sair_do_app -> {
+                lifecycleScope.launch {
+                    deslogaUsuario()
+                }
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun vaiParaListaProdutos() {
+        val intent = Intent(this, ListaProdutosActivity::class.java)
         startActivity(intent)
     }
+
 }
+

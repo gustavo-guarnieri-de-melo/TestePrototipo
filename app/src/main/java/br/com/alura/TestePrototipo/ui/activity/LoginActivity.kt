@@ -1,5 +1,6 @@
 package br.com.alura.TestePrototipo.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.preferences.core.edit
@@ -42,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 dataStore.edit { preferences ->
                     preferences[usuarioLogadoPreferences] = usuario.id
                 }
-                vaiPara(ListaProdutosActivity::class.java)
+                vaiParaTelaInicial(TelaInicialActivity::class.java)
                 finish()
             } ?: toast("Falha na autenticação")
         }
@@ -52,6 +53,10 @@ class LoginActivity : AppCompatActivity() {
         binding.activityLoginBotaoCadastrar.setOnClickListener {
             vaiPara(FormularioCadastroUsuarioActivity::class.java)
         }
+    }
+    private fun vaiParaTelaInicial(TelaInicialActivity: Class<*>) {
+        val intent = Intent(this, TelaInicialActivity)
+        startActivity(intent)
     }
 
 }

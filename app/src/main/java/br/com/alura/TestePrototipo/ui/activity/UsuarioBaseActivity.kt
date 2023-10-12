@@ -44,7 +44,7 @@ abstract class UsuarioBaseActivity : AppCompatActivity() {
             }
     }
 
-    protected suspend fun deslogaUsuario() {
+    suspend fun deslogaUsuario() {
         dataStore.edit { preferences ->
             preferences.remove(usuarioLogadoPreferences)
         }

@@ -46,16 +46,16 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.menu_lista_produtos_sair_do_app -> {
-                lifecycleScope.launch {
-                    deslogaUsuario()
-                }
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.menu_lista_produtos_sair_do_app -> {
+//                lifecycleScope.launch {
+//                    deslogaUsuario()
+//                }
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
     private suspend fun buscaProdutosUsuario(usuarioId: String) {
         produtoDao.buscaTodosDoUsuario(usuarioId).collect { produtos ->
@@ -74,6 +74,8 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
         val intent = Intent(this, FormularioProdutoActivity::class.java)
         startActivity(intent)
     }
+
+
 
     private fun configuraRecyclerView() {
         val recyclerView = binding.activityListaProdutosRecyclerView
