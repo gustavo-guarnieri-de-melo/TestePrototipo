@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 4,
-    "identityHash": "f5e9eeb2a5a005fedc5968c55dc5cacd",
+    "identityHash": "ede75d9036c813aac09af0297b65bc2a",
     "entities": [
       {
         "tableName": "Produto",
@@ -62,11 +62,11 @@
       },
       {
         "tableName": "Usuario",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nome` TEXT NOT NULL, `senha` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`usuario` TEXT NOT NULL, `nome` TEXT NOT NULL, `senha` TEXT NOT NULL, PRIMARY KEY(`usuario`))",
         "fields": [
           {
-            "fieldPath": "id",
-            "columnName": "id",
+            "fieldPath": "usuario",
+            "columnName": "usuario",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -85,7 +85,7 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "id"
+            "usuario"
           ],
           "autoGenerate": false
         },
@@ -96,7 +96,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f5e9eeb2a5a005fedc5968c55dc5cacd')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ede75d9036c813aac09af0297b65bc2a')"
     ]
   }
 }

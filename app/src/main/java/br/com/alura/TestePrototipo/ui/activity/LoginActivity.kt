@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         lifecycleScope.launch {
             usuarioDao.autentica(usuario, senha)?.let { usuario ->
                 dataStore.edit { preferences ->
-                    preferences[usuarioLogadoPreferences] = usuario.id
+                    preferences[usuarioLogadoPreferences] = usuario.usuario
                 }
                 vaiParaTelaInicial(TelaInicialActivity::class.java)
                 finish()

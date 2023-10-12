@@ -37,23 +37,15 @@ abstract class UsuarioBaseActivity : AppCompatActivity() {
     }
 
     private suspend fun buscaUsuario(usuarioId: String): Usuario? {
-        return usuarioDao
-            .buscaPorId(usuarioId)
-            .firstOrNull().also {
-                _usuario.value = it
-            }
+        return usuarioDao.buscaPorId(usuarioId).firstOrNull().also { _usuario.value = it }
     }
 
     suspend fun deslogaUsuario() {
-        dataStore.edit { preferences ->
-            preferences.remove(usuarioLogadoPreferences)
-        }
+        dataStore.edit { preferences -> preferences.remove(usuarioLogadoPreferences) }
     }
 
     private fun vaiParaLogin() {
-        vaiPara(LoginActivity::class.java) {
-            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        }
+        vaiPara(LoginActivity::class.java) { addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) }
         finish()
     }
 

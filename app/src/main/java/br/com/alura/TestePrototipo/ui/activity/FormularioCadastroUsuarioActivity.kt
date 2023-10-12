@@ -28,7 +28,11 @@ class FormularioCadastroUsuarioActivity : AppCompatActivity() {
     private fun configuraBotaoCadastrar() {
         binding.activityFormularioCadastroBotaoCadastrar.setOnClickListener {
             val novoUsuario = criaUsuario()
-            cadastra(novoUsuario)
+            if (novoUsuario.usuario.isNotEmpty() && novoUsuario.nome.isNotEmpty() && novoUsuario.senha.isNotEmpty()) {
+                cadastra(novoUsuario)
+            } else {
+                toast("Preencha todos os campos")
+            }
         }
     }
 
@@ -50,4 +54,5 @@ class FormularioCadastroUsuarioActivity : AppCompatActivity() {
         val senha = binding.activityFormularioCadastroSenha.text.toString()
         return Usuario(usuario, nome, senha)
     }
+
 }

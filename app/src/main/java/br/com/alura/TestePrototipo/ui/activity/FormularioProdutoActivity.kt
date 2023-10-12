@@ -32,11 +32,8 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
         title = "Cadastrar produto"
         configuraBotaoSalvar()
         binding.activityFormularioProdutoImagem.setOnClickListener {
-            FormularioImagemDialog(this)
-                .mostra(url) { imagem ->
-                    url = imagem
-                    binding.activityFormularioProdutoImagem.tentaCarregarImagem(url)
-                }
+            FormularioImagemDialog(this).mostra(url) { imagem -> url = imagem
+                binding.activityFormularioProdutoImagem.tentaCarregarImagem(url) }
         }
         tentaCarregarProduto()
 
@@ -82,7 +79,7 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
         botaoSalvar.setOnClickListener {
             lifecycleScope.launch {
                 usuario.value?.let { usuario ->
-                    val produtoNovo = criaProduto(usuario.id)
+                    val produtoNovo = criaProduto(usuario.usuario)
                     produtoDao.salva(produtoNovo)
                     finish()
                 }

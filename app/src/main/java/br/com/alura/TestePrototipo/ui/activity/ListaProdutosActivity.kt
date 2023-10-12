@@ -35,7 +35,7 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
                 usuario
                     .filterNotNull()
                     .collect { usuario ->
-                        buscaProdutosUsuario(usuario.id)
+                        buscaProdutosUsuario(usuario.usuario)
                     }
             }
         }
