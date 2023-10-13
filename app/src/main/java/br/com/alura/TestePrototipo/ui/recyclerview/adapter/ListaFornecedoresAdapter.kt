@@ -36,10 +36,8 @@ class ListaFornecedoresAdapter(
             nome.text = fornecedor.nome
             val descricao = binding.fornecedorItemDescricao
             descricao.text = fornecedor.descricao
-            val id = binding.fornecedorItemId
+            val id = binding.forncedorItemValor
             id.text = fornecedor.id.toString()
-            val tipo = binding.fornecedorItemTipo
-            tipo.text = fornecedor.tipo
 //            val valor = binding.produtoItemValor
 //            val valorEmMoeda: String = produto.valor
 //                .formataParaMoedaBrasileira()

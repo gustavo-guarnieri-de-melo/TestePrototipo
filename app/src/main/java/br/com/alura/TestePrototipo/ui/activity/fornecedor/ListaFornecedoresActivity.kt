@@ -60,7 +60,7 @@ class ListaFornecedoresActivity : UsuarioBaseActivity() {
 
 
     private fun configuraRecyclerView() {
-        val recyclerView = binding.activityListaFornecedorRecyclerView
+        val recyclerView = binding.activityListaCadastrosFornecedoresRecyclerView
         recyclerView.adapter = adapter
         adapter.quandoClicaNoItem = {
             val intent = Intent(

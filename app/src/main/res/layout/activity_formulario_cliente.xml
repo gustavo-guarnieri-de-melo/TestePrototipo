@@ -9,10 +9,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="br.com.alura.TestePrototipo.ui.activity.fornecedor.FormularioFornecedorActivity">
+        tools:context=".ui.activity.FormularioClienteActivity">
 
         <ImageView
-            android:id="@+id/activity_formulario_fornecedor_imagem"
+            android:id="@+id/activity_formulario_cliente_imagem"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
@@ -22,18 +22,18 @@
             app:srcCompat="@drawable/imagem_padrao" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/formulario_fornecedor_textinputlayout_name"
+            android:id="@+id/formulario_cliente_textinputlayout_nome"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/activity_formulario_fornecedor_imagem"
+            app:layout_constraintTop_toBottomOf="@id/activity_formulario_cliente_imagem"
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_formulario_fornecedor_nome"
+                android:id="@+id/activity_formulario_cliente_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nome"
@@ -42,17 +42,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/formulario_fornecedor_textinputlayout_descricao"
+            android:id="@+id/formulario_cliente_textinputlayout_descricao"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/formulario_fornecedor_textinputlayout_name">
+            app:layout_constraintTop_toBottomOf="@id/formulario_cliente_textinputlayout_nome">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_formulario_fornecedor_descricao"
+                android:id="@+id/activity_formulario_cliente_descricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Descrição"
@@ -61,45 +61,45 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/formulario_fornecedor_textinputlayout_tipo"
+            android:id="@+id/formulario_cliente_textinputlayout_tipo"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/formulario_fornecedor_textinputlayout_valor">
+            app:layout_constraintTop_toBottomOf="@id/formulario_cliente_textinputlayout_valor">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_formulario_fornecedor_tipo"
+                android:id="@+id/activity_formulario_cliente_tipo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tipo"
+                android:hint="RUA"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/formulario_fornecedor_textinputlayout_valor"
+            android:id="@+id/formulario_cliente_textinputlayout_valor"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/formulario_fornecedor_textinputlayout_descricao">
+            app:layout_constraintTop_toBottomOf="@id/formulario_cliente_textinputlayout_descricao">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_formulario_fornecedor_valor"
+                android:id="@+id/activity_formulario_cliente_cpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Valor"
+                android:hint="CPF"
                 android:inputType="numberDecimal" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/activity_formulario_fornecedor_botao_salvar"
+            android:id="@+id/activity_formulario_cliente_botao_salvar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -107,7 +107,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/formulario_fornecedor_textinputlayout_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/formulario_cliente_textinputlayout_tipo"
             app:layout_constraintVertical_bias="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

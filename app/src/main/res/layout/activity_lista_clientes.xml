@@ -14,14 +14,14 @@
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="start|center_vertical"
-        android:text="Fornecedores"
+        android:text="Clientes"
         android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/activity_lista_cadastros_fornecedores_recyclerView"
+        android:id="@+id/activity_lista_cadastros_cliente_recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -29,11 +29,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Titulo"
-        tools:listitem="@layout/fornecedor_item" />
+        tools:listitem="@layout/cliente_item" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/activity_lista_fornecedor_fab"
+        android:id="@+id/activity_lista_cliente_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

@@ -37,6 +37,15 @@
         <activity android:name="br.com.alura.TestePrototipo.ui.activity.produto.ListaProdutosActivity"
             android:exported="true">
         </activity>
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.fornecedor.DetalhesFornecedorActivity" />
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.fornecedor.FormularioFornecedorActivity" />
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.fornecedor.ListaFornecedoresActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.cliente.DetalhesClienteActivity"/>
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.cliente.FormularioClienteActivity"/>
+        <activity android:name="br.com.alura.TestePrototipo.ui.activity.cliente.ListaClientesActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"
