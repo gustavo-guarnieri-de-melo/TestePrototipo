@@ -6,15 +6,18 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import br.com.alura.TestePrototipo.database.converter.Converters
+import br.com.alura.TestePrototipo.database.dao.FornecedorDao
 import br.com.alura.TestePrototipo.database.dao.ProdutoDao
 import br.com.alura.TestePrototipo.database.dao.UsuarioDao
+import br.com.alura.TestePrototipo.model.Fornecedor
 import br.com.alura.TestePrototipo.model.Produto
 import br.com.alura.TestePrototipo.model.Usuario
 
 @Database(
     entities = [
         Produto::class,
-        Usuario::class
+        Usuario::class,
+        Fornecedor::class
     ],
     version = 4,
     exportSchema = true
@@ -22,6 +25,7 @@ import br.com.alura.TestePrototipo.model.Usuario
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
+    abstract fun fornecedorDao(): FornecedorDao
     abstract fun produtoDao(): ProdutoDao
 
     abstract fun usuarioDao(): UsuarioDao

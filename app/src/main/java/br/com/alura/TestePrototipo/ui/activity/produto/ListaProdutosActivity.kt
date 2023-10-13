@@ -1,13 +1,12 @@
-package br.com.alura.TestePrototipo.ui.activity
+package br.com.alura.TestePrototipo.ui.activity.produto
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.lifecycle.lifecycleScope
 import br.com.alura.TestePrototipo.database.AppDatabase
+import br.com.alura.TestePrototipo.ui.activity.CHAVE_PRODUTO_ID
+import br.com.alura.TestePrototipo.ui.activity.usuario.UsuarioBaseActivity
 import br.com.alura.TestePrototipo.ui.recyclerview.adapter.ListaProdutosAdapter
-import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityListaProdutosActivityBinding
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
@@ -41,10 +40,10 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_lista_produtos, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu_lista_cadastros, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
 
 //    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 //        when (item.itemId) {

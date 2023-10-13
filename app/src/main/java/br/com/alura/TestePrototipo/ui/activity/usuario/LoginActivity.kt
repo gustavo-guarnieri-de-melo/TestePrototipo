@@ -1,4 +1,4 @@
-package br.com.alura.TestePrototipo.ui.activity
+package br.com.alura.TestePrototipo.ui.activity.usuario
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import br.com.alura.TestePrototipo.extensions.toast
 import br.com.alura.TestePrototipo.extensions.vaiPara
 import br.com.alura.TestePrototipo.preferences.dataStore
 import br.com.alura.TestePrototipo.preferences.usuarioLogadoPreferences
+import br.com.alura.TestePrototipo.ui.activity.TelaInicialActivity
 import br.com.alura.orgs.databinding.ActivityLoginBinding
 import kotlinx.coroutines.launch
 

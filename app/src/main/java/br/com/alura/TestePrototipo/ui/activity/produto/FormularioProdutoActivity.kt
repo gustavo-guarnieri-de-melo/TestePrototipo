@@ -1,4 +1,4 @@
-package br.com.alura.TestePrototipo.ui.activity
+package br.com.alura.TestePrototipo.ui.activity.produto
 
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
@@ -6,6 +6,8 @@ import br.com.alura.TestePrototipo.database.AppDatabase
 import br.com.alura.TestePrototipo.database.dao.ProdutoDao
 import br.com.alura.TestePrototipo.extensions.tentaCarregarImagem
 import br.com.alura.TestePrototipo.model.Produto
+import br.com.alura.TestePrototipo.ui.activity.CHAVE_PRODUTO_ID
+import br.com.alura.TestePrototipo.ui.activity.usuario.UsuarioBaseActivity
 import br.com.alura.TestePrototipo.ui.dialog.FormularioImagemDialog
 import br.com.alura.orgs.databinding.ActivityFormularioProdutoBinding
 import kotlinx.coroutines.launch

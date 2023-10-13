@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_lista_produtos_sair_do_app"
+        android:id="@+id/menu_lista_cadastros_volta_para_tela_inicial"
         android:icon="@drawable/ic_action_sair_do_app"
-        android:title="Sair do App"
+        android:title="Voltar para cadastros"
         app:showAsAction="ifRoom" />
 </menu>

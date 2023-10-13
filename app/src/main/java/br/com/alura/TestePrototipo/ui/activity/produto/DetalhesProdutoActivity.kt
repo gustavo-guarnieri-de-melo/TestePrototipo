@@ -1,4 +1,4 @@
-package br.com.alura.TestePrototipo.ui.activity
+package br.com.alura.TestePrototipo.ui.activity.produto
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import br.com.alura.TestePrototipo.database.AppDatabase
 import br.com.alura.TestePrototipo.extensions.formataParaMoedaBrasileira
 import br.com.alura.TestePrototipo.extensions.tentaCarregarImagem
 import br.com.alura.TestePrototipo.model.Produto
+import br.com.alura.TestePrototipo.ui.activity.CHAVE_PRODUTO_ID
 import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityDetalhesProdutoBinding
 import kotlinx.coroutines.launch

@@ -9,27 +9,27 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="br.com.alura.TestePrototipo.ui.activity.TelaInicialActivity">
+        tools:context="br.com.alura.TestePrototipo.ui.activity.ListaDeCadastrosActivity">
 
         <TextView
             android:id="@+id/Titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ITech Futute"
+            android:text="CADASTROS"
             android:textSize="50dp"
             tools:layout_editor_absoluteX="50dp"
             tools:layout_editor_absoluteY="16dp"
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/activity_tela_inicial_cadastros"
+            android:id="@+id/activity_lista_cadastros_clientes"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@color/white"
             android:padding="20dp"
-            android:text="CADASTROS"
+            android:text="clientes"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Titulo"
@@ -37,49 +37,36 @@
             tools:layout_editor_absoluteX="16dp" />
 
         <Button
-            android:id="@+id/activity_tela_inicial_pagamentos"
+            android:id="@+id/activity_lista_cadastros_fornecedores"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@color/white"
             android:padding="20dp"
-            android:text="PAGAMENTOS"
+            android:text="FORNECEDORES"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_notas"
+            app:layout_constraintTop_toBottomOf="@+id/activity_lista_cadastros_clientes"
             app:layout_constraintVertical_bias="0.1"
             tools:layout_editor_absoluteX="16dp" />
 
         <Button
-            android:id="@+id/activity_tela_inicial_notas"
+            android:id="@+id/activity_lista_cadastros_produtos"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@color/white"
             android:padding="20dp"
-            android:text="NOTAS"
+            android:text="PRODUTOS"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_cadastros"
+            app:layout_constraintTop_toBottomOf="@+id/activity_lista_cadastros_fornecedores"
             app:layout_constraintVertical_bias="0.1"
             tools:layout_editor_absoluteX="16dp" />
 
-        <Button
-            android:id="@+id/activity_tela_inicial_recebimentos"
-            style="@style/Widget.MaterialComponents.Button.Icon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:backgroundTint="@color/white"
-            android:padding="20dp"
-            android:text="RECEBIMENTOS"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_tela_inicial_pagamentos"
-            app:layout_constraintVertical_bias="0.1"
-            tools:layout_editor_absoluteX="16dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

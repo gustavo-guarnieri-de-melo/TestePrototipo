@@ -1,4 +1,4 @@
-package br.com.alura.TestePrototipo.ui.activity
+package br.com.alura.TestePrototipo.ui.activity.usuario
 
 import android.content.Intent
 import android.os.Bundle
