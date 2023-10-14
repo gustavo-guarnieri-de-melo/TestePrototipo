@@ -12,17 +12,16 @@
         tools:context=".ui.activity.LoginActivity">
 
         <ImageView
-            android:padding="16dp"
             android:id="@+id/activity_login_imagem_logo"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="251dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.251"
-            app:srcCompat="@drawable/img" />
+            app:layout_constraintVertical_bias="0.075"
+            app:srcCompat="@drawable/itech" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputlayout_usuario"
@@ -33,6 +32,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:paddingTop="20dp"
             tools:layout_editor_absoluteY="280dp"
             app:layout_constraintTop_toBottomOf="@+id/activity_login_imagem_logo">
 
@@ -68,7 +68,7 @@
             android:id="@+id/activity_login_botao_entrar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="28dp"
             android:text="Entrar"
             app:layout_constraintEnd_toEndOf="@id/textInputlayout_senha"
             app:layout_constraintHorizontal_bias="0.0"
