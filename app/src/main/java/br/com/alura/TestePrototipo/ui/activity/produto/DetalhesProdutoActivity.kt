@@ -2,8 +2,11 @@ package br.com.alura.TestePrototipo.ui.activity.produto
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import br.com.alura.TestePrototipo.database.AppDatabase
@@ -26,10 +29,18 @@ class DetalhesProdutoActivity : AppCompatActivity() {
         AppDatabase.instancia(this).produtoDao()
     }
 
+
+    override fun openContextMenu(view: View?) {
+        super.openContextMenu(view)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        title = "Detalhes do produto"
         setContentView(binding.root)
         tentaCarregarProduto()
+
+
     }
 
     override fun onResume() {
@@ -78,14 +89,51 @@ class DetalhesProdutoActivity : AppCompatActivity() {
         produtoId = intent.getLongExtra(CHAVE_PRODUTO_ID, 0L)
     }
 
+
     private fun preencheCampos(produtoCarregado: Produto) {
         with(binding) {
             activityDetalhesProdutoImagem.tentaCarregarImagem(produtoCarregado.imagem)
             activityDetalhesProdutoNome.text = produtoCarregado.nome
             activityDetalhesProdutoDescricao.text = produtoCarregado.descricao
-            activityDetalhesProdutoTipo.text = produtoCarregado.tipo
             activityDetalhesProdutoValor.text = produtoCarregado.valor.formataParaMoedaBrasileira()
+
+
         }
     }
 
 }
+//            Formata para quando o campo estiver vazio sumir
+//            if (!produtoCarregado.tipo1.isNullOrEmpty()){
+//                activityDetalhesProdutoTipo1.text = produtoCarregado.tipo1
+//                activityDetalhesProdutoTipo1.visibility = View.VISIBLE
+//            }else{
+//                activityDetalhesProdutoTipo1.visibility = View.GONE
+//            }
+//
+//            if (!produtoCarregado.tipo2.isNullOrEmpty()){
+//                activityDetalhesProdutoTipo2.text = produtoCarregado.tipo2
+//                activityDetalhesProdutoTipo2.visibility = View.VISIBLE
+//            }else{
+//                activityDetalhesProdutoTipo2.visibility = View.GONE
+//            }
+//
+//            if (!produtoCarregado.tipo3.isNullOrEmpty()) {
+//                activityDetalhesProdutoTipo3.text = produtoCarregado.tipo3
+//                activityDetalhesProdutoTipo3.visibility = View.VISIBLE
+//            } else {
+//                activityDetalhesProdutoTipo3.visibility = View.GONE
+//            }
+//
+//            if (!produtoCarregado.tipo4.isNullOrEmpty()){
+//                activityDetalhesProdutoTipo4.text = produtoCarregado.tipo4
+//                activityDetalhesProdutoTipo4.visibility = View.VISIBLE
+//            }else{
+//                activityDetalhesProdutoTipo4.visibility = View.GONE
+//            }
+//
+//            if (!produtoCarregado.tipo5.isNullOrEmpty()){
+//                activityDetalhesProdutoTipo5.text = produtoCarregado.tipo5
+//                activityDetalhesProdutoTipo5.visibility = View.VISIBLE
+//            }else{
+//                activityDetalhesProdutoTipo5.visibility = View.GONE
+//            }

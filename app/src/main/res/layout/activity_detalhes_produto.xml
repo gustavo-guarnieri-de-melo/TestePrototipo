@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorOnPrimary"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,39 +24,65 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/activity_detalhes_produto_nome"
-            android:layout_width="0dp"
+            android:id="@+id/activity_detalhes_produto_nm_nome"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_imagem"
+            android:text="nome: "/>
+        <TextView
+            android:id="@+id/activity_detalhes_produto_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:fontFamily="@font/montserrat_bold"
             android:textSize="28sp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_nm_nome"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="@tools:sample/lorem[10]" />
+            tools:text="Nome" />
+
+        <TextView
+            android:id="@+id/activity_detalhes_produto_dc_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descrição: "
+            android:layout_marginLeft="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_nome"/>
 
         <TextView
             android:id="@+id/activity_detalhes_produto_descricao"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="top"
-            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/activity_detalhes_produto_nome"
-            tools:text="@tools:sample/lorem/random" />
+            app:layout_constraintTop_toBottomOf="@id/activity_detalhes_produto_dc_descricao"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Descrição" />
 
         <TextView
-            android:id="@+id/activity_detalhes_produto_tipo"
+            android:id="@+id/activity_detalhes_produto_tp_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Tipo: "
+
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_descricao"/>
+        <TextView
+            android:id="@+id/activity_detalhes_produto_tipo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
             android:background="@drawable/plano_de_fundo_arredondado"
             android:elevation="10dp"
             android:fontFamily="@font/montserrat_bold"
@@ -65,12 +92,95 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/activity_detalhes_produto_imagem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tp_tipo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="TIPO1" />
+
+        <TextView
+            android:id="@+id/activity_detalhes_produto_tipo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/plano_de_fundo_arredondado"
+            android:elevation="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tipo1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_imagem"
-            tools:text="TIPO" />
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="TIPO2" />
+
+        <TextView
+            android:id="@+id/activity_detalhes_produto_tipo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/plano_de_fundo_arredondado"
+            android:elevation="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tipo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="118dp"
+            tools:text="TIPO3" />
+
+        <TextView
+            android:id="@+id/activity_detalhes_produto_tipo4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/plano_de_fundo_arredondado"
+            android:elevation="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tipo3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="228dp"
+            tools:text="TIPO4" />
+
+        <TextView
+            android:id="@+id/activity_detalhes_produto_tipo5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/plano_de_fundo_arredondado"
+            android:elevation="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_produto_tipo4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="283dp"
+            tools:text="TIPO5" />
 
         <TextView
             android:id="@+id/activity_detalhes_produto_valor"

@@ -12,9 +12,9 @@ data class Fornecedor(
     @PrimaryKey(autoGenerate = true)
     val id: Long,
     val nome: String,
-    val descricao: String,
-    val tipo: String,
-    val valor: BigDecimal,
+    val sacado: String,
+    val rua: String,
+    val cpf: String,
     val imagem: String? = null,
     val usuarioId: String? = null
 ) : Parcelable

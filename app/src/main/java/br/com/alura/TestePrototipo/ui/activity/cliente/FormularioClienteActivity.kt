@@ -66,12 +66,12 @@ class FormularioClienteActivity : UsuarioBaseActivity() {
             .tentaCarregarImagem(cliente.imagem)
         binding.activityFormularioClienteNome
             .setText(cliente.nome)
-        binding.activityFormularioClienteDescricao
-            .setText(cliente.descricao)
+        binding.activityFormularioClienteSacado
+            .setText(cliente.sacado)
         binding.activityFormularioClienteCpf
             .setText(cliente.cpf)
         binding.activityFormularioClienteTipo
-            .setText(cliente.tipo)
+            .setText(cliente.rua)
     }
 
     private fun configuraBotaoSalvar() {
@@ -91,8 +91,8 @@ class FormularioClienteActivity : UsuarioBaseActivity() {
     private fun criaCliente(usuarioId: String): Cliente {
         val campoNome = binding.activityFormularioClienteNome
         val nome = campoNome.text.toString()
-        val campoDescricao = binding.activityFormularioClienteDescricao
-        val descricao = campoDescricao.text.toString()
+        val campoDescricao = binding.activityFormularioClienteSacado
+        val sacado = campoDescricao.text.toString()
         val campoTipo = binding.activityFormularioClienteTipo
         val tipo = campoTipo.text.toString()
         val campoCpf = binding.activityFormularioClienteCpf
@@ -104,11 +104,11 @@ class FormularioClienteActivity : UsuarioBaseActivity() {
         return Cliente(
             id = clienteId,
             nome = nome,
-            descricao = descricao,
+            sacado = sacado,
             cpf = cpf,
             imagem = url,
             usuarioId = usuarioId,
-            tipo = tipo
+            rua = tipo
         )
     }
 

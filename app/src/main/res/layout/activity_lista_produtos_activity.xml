@@ -56,18 +56,6 @@
             android:text="Produto"
             android:textSize="20dp"/>
 
-        <TextView
-            android:id="@+id/produto_item_tipo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="start|center_vertical"
-            android:text="Tipo"
-            android:textSize="20dp"/>
-
 
         <TextView
             android:id="@+id/produto_item_id"

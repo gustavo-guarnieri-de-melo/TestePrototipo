@@ -33,7 +33,7 @@ class ListaClientesAdapter(
             val nome = binding.clienteItemNome
             nome.text = cliente.nome
             val descricao = binding.clienteItemDescricao
-            descricao.text = cliente.descricao
+            descricao.text = cliente.sacado
             val id = binding.forncedorItemValor
             id.text = cliente.id.toString()
 

@@ -14,7 +14,7 @@ class ListaDeCadastrosActivity : UsuarioBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.activityListaCadastrosProdutos.setOnClickListener {
+        binding.activityListaCadastrosProdutos.setOnClickListener{
             vaiParaListaProdutos()
         }
         setContentView(binding.root)

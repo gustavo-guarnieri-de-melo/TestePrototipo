@@ -14,8 +14,8 @@
 
         <TextView
             android:id="@+id/cliente_item_nome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="16dp"
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_bold"
@@ -23,28 +23,28 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/lorem/random" />
+            tools:text="nome" />
 
         <TextView
             android:id="@+id/cliente_item_descricao"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
+            android:layout_margin="16dp"
             android:maxLines="1"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/cliente_item_nome"
             app:layout_constraintStart_toStartOf="@id/cliente_item_nome"
             app:layout_constraintTop_toBottomOf="@id/cliente_item_nome"
-            tools:text="@tools:sample/lorem/random" />
+            tools:text="Sacado" />
 
         <TextView
             android:id="@+id/forncedor_item_valor"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_margin="16dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/montserrat"
             android:textColor="@android:color/holo_green_dark"
@@ -54,20 +54,20 @@
             app:layout_constraintEnd_toEndOf="@id/cliente_item_nome"
             app:layout_constraintStart_toStartOf="@id/cliente_item_nome"
             app:layout_constraintTop_toBottomOf="@id/cliente_item_descricao"
-            tools:text="R$ 19.99" />
+            tools:text="Id" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintWidth_percent="0.3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/cliente_item_nome"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/produto_1"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintWidth_percent="0.3"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/cliente_item_nome"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/produto_1"-->
+<!--            tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

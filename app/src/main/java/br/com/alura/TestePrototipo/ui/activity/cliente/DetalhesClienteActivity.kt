@@ -13,6 +13,8 @@ import br.com.alura.TestePrototipo.ui.activity.CHAVE_CLIENTE_ID
 import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityDetalhesClienteBinding
 import kotlinx.coroutines.launch
+import java.text.NumberFormat
+import java.text.ParseException
 
 class DetalhesClienteActivity : AppCompatActivity() {
 
@@ -77,13 +79,19 @@ class DetalhesClienteActivity : AppCompatActivity() {
         clienteId = intent.getLongExtra(CHAVE_CLIENTE_ID, 0L)
     }
 
+    private fun formatarCpf(cpf: String): String {
+        val regex = "(\\d{3})(\\d{3})(\\d{3})(\\d{2})".toRegex()
+        return cpf.replace(regex, "$1.$2.$3-$4")
+    }
+
     private fun preencheCampos(clienteCarregado: Cliente) {
         with(binding) {
             activityDetalhesClienteImagem.tentaCarregarImagem(clienteCarregado.imagem)
             activityDetalhesClienteNome.text = clienteCarregado.nome
-            activityDetalhesClienteDescricao.text = clienteCarregado.descricao
-            activityDetalhesClienteTipo.text = clienteCarregado.tipo
-            activityDetalhesClienteValor.text = clienteCarregado.cpf
+            activityDetalhesClienteSacado.text = clienteCarregado.sacado
+            activityDetalhesClienteRua.text = clienteCarregado.rua
+            activityDetalhesClienteCpf.text = formatarCpf(clienteCarregado.cpf)
+
         }
     }
 

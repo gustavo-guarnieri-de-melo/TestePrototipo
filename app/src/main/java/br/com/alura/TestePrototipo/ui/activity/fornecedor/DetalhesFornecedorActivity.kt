@@ -19,9 +19,11 @@ class DetalhesFornecedorActivity : AppCompatActivity() {
 
     private var fornecedorId: Long = 0L
     private var fornecedor: Fornecedor? = null
+
     private val binding by lazy {
         ActivityDetalhesFornecedorBinding.inflate(layoutInflater)
     }
+
     private val fornecedorDao by lazy {
         AppDatabase.instancia(this).fornecedorDao()
     }
@@ -82,10 +84,15 @@ class DetalhesFornecedorActivity : AppCompatActivity() {
         with(binding) {
             activityDetalhesFornecedorImagem.tentaCarregarImagem(fornecedorCarregado.imagem)
             activityDetalhesFornecedorNome.text = fornecedorCarregado.nome
-            activityDetalhesFornecedorDescricao.text = fornecedorCarregado.descricao
-            activityDetalhesFornecedorTipo.text = fornecedorCarregado.tipo
-            activityDetalhesFornecedorValor.text = fornecedorCarregado.valor.formataParaMoedaBrasileira()
+            activityDetalhesFornecedorSacado.text = fornecedorCarregado.sacado
+            activityDetalhesFornecedorRua.text = fornecedorCarregado.rua
+            activityDetalhesFornecedorCpf.text = formatarCpf(fornecedorCarregado.cpf)
+//                .formataParaMoedaBrasileira()
         }
+    }
+    private fun formatarCpf(cpf: String): String {
+        val regex = "(\\d{3})(\\d{3})(\\d{3})(\\d{2})".toRegex()
+        return cpf.replace(regex, "$1.$2.$3-$4")
     }
 
 }

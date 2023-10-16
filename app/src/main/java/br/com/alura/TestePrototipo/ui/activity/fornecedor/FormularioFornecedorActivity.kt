@@ -11,7 +11,6 @@ import br.com.alura.TestePrototipo.ui.activity.usuario.UsuarioBaseActivity
 import br.com.alura.TestePrototipo.ui.dialog.FormularioImagemDialog
 import br.com.alura.orgs.databinding.ActivityFormularioFornecedorBinding
 import kotlinx.coroutines.launch
-import java.math.BigDecimal
 
 class FormularioFornecedorActivity : UsuarioBaseActivity() {
 
@@ -67,12 +66,12 @@ class FormularioFornecedorActivity : UsuarioBaseActivity() {
             .tentaCarregarImagem(fornecedor.imagem)
         binding.activityFormularioFornecedorNome
             .setText(fornecedor.nome)
-        binding.activityFormularioFornecedorDescricao
-            .setText(fornecedor.descricao)
-        binding.activityFormularioFornecedorValor
-            .setText(fornecedor.valor.toPlainString())
-        binding.activityFormularioFornecedorTipo
-            .setText(fornecedor.tipo)
+        binding.activityFormularioFornecedorSacado
+            .setText(fornecedor.sacado)
+        binding.activityFormularioFornecedorCpf
+            .setText(fornecedor.cpf)
+        binding.activityFormularioFornecedorRua
+            .setText(fornecedor.rua)
     }
 
     private fun configuraBotaoSalvar() {
@@ -92,26 +91,22 @@ class FormularioFornecedorActivity : UsuarioBaseActivity() {
     private fun criaFornecedor(usuarioId: String): Fornecedor {
         val campoNome = binding.activityFormularioFornecedorNome
         val nome = campoNome.text.toString()
-        val campoDescricao = binding.activityFormularioFornecedorDescricao
-        val descricao = campoDescricao.text.toString()
-        val campoTipo = binding.activityFormularioFornecedorTipo
-        val tipo = campoTipo.text.toString()
-        val campoValor = binding.activityFormularioFornecedorValor
-        val valorEmTexto = campoValor.text.toString()
-        val valor = if (valorEmTexto.isBlank()) {
-            BigDecimal.ZERO
-        } else {
-            BigDecimal(valorEmTexto)
-        }
+        val campoSacado = binding.activityFormularioFornecedorSacado
+        val sacado = campoSacado.text.toString()
+        val campoRua = binding.activityFormularioFornecedorRua
+        val rua = campoRua.text.toString()
+        val campoCpf = binding.activityFormularioFornecedorCpf
+        val cpf = campoCpf.text.toString()
+
 
         return Fornecedor(
             id = fornecedorId,
             nome = nome,
-            descricao = descricao,
-            valor = valor,
+            sacado = sacado,
+            cpf = cpf,
             imagem = url,
             usuarioId = usuarioId,
-            tipo = tipo
+            rua = rua
         )
     }
 

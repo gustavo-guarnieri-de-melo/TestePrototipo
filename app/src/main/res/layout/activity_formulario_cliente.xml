@@ -52,10 +52,10 @@
             app:layout_constraintTop_toBottomOf="@id/formulario_cliente_textinputlayout_nome">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/activity_formulario_cliente_descricao"
+                android:id="@+id/activity_formulario_cliente_sacado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Descrição"
+                android:hint="Sacado"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>

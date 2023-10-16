@@ -36,8 +36,16 @@ class ListaProdutosAdapter(
             descricao.text = produto.descricao
             val id = binding.produtoItemId
             id.text = produto.id.toString()
-            val tipo = binding.produtoItemTipo
-            tipo.text = produto.tipo
+//            val tipo1 = binding.produtoItemTipo
+//            tipo1.text = produto.tipo1
+//            val tipo2 = binding.produtoItemTipo
+//            tipo2.text = produto.tipo2
+//            val tipo3 = binding.produtoItemTipo
+//            tipo3.text = produto.tipo3
+//            val tipo4 = binding.produtoItemTipo
+//            tipo4.text = produto.tipo4
+//            val tipo5 = binding.produtoItemTipo
+//            tipo5.text = produto.tipo5
 //            val valor = binding.produtoItemValor
 //            val valorEmMoeda: String = produto.valor
 //                .formataParaMoedaBrasileira()

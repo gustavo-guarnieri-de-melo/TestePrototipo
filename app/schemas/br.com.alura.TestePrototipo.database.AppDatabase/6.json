@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 6,
-    "identityHash": "3b3cab33dc62f09962164ad8f68cfe71",
+    "identityHash": "102a7a623bcc523497453bc98485b720",
     "entities": [
       {
         "tableName": "Cliente",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `tipo` TEXT NOT NULL, `cpf` TEXT NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `sacado` TEXT NOT NULL, `rua` TEXT NOT NULL, `cpf` TEXT NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -21,14 +21,14 @@
             "notNull": true
           },
           {
-            "fieldPath": "descricao",
-            "columnName": "descricao",
+            "fieldPath": "sacado",
+            "columnName": "sacado",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "tipo",
-            "columnName": "tipo",
+            "fieldPath": "rua",
+            "columnName": "rua",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -62,7 +62,7 @@
       },
       {
         "tableName": "Produto",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `tipo` TEXT NOT NULL, `valor` REAL NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `valor` REAL NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -79,12 +79,6 @@
           {
             "fieldPath": "descricao",
             "columnName": "descricao",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "tipo",
-            "columnName": "tipo",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -150,7 +144,7 @@
       },
       {
         "tableName": "Fornecedor",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `tipo` TEXT NOT NULL, `valor` REAL NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `sacado` TEXT NOT NULL, `rua` TEXT NOT NULL, `cpf` TEXT NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -165,21 +159,21 @@
             "notNull": true
           },
           {
-            "fieldPath": "descricao",
-            "columnName": "descricao",
+            "fieldPath": "sacado",
+            "columnName": "sacado",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "tipo",
-            "columnName": "tipo",
+            "fieldPath": "rua",
+            "columnName": "rua",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "valor",
-            "columnName": "valor",
-            "affinity": "REAL",
+            "fieldPath": "cpf",
+            "columnName": "cpf",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -208,7 +202,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3b3cab33dc62f09962164ad8f68cfe71')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '102a7a623bcc523497453bc98485b720')"
     ]
   }
 }

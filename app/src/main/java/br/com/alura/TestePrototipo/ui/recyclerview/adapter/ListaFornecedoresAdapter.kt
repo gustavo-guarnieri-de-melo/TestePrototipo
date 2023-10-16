@@ -35,7 +35,7 @@ class ListaFornecedoresAdapter(
             val nome = binding.fornecedorItemNome
             nome.text = fornecedor.nome
             val descricao = binding.fornecedorItemDescricao
-            descricao.text = fornecedor.descricao
+            descricao.text = fornecedor.sacado
             val id = binding.forncedorItemValor
             id.text = fornecedor.id.toString()
 //            val valor = binding.produtoItemValor

@@ -13,7 +13,11 @@ data class Produto(
         val id: Long,
         val nome: String,
         val descricao: String,
-        val tipo: String,
+//        val tipo1: String,
+//        val tipo2: String,
+//        val tipo3: String,
+//        val tipo4: String,
+//        val tipo5: String,
         val valor: BigDecimal,
         val imagem: String? = null,
         val usuarioId: String? = null
