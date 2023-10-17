@@ -14,6 +14,7 @@ import br.com.alura.TestePrototipo.ui.activity.usuario.UsuarioBaseActivity
 import br.com.alura.TestePrototipo.ui.dialog.FormularioImagemDialog
 import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityFormularioProdutoBinding
+import br.com.alura.orgs.databinding.ActivityFormularioTipoBinding
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
 
@@ -21,6 +22,9 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
 
     private val binding by lazy {
         ActivityFormularioProdutoBinding.inflate(layoutInflater)
+    }
+    private val tipo by lazy {
+        ActivityFormularioTipoBinding.inflate(layoutInflater)
     }
     private var url: String? = null
     private var produtoId = 0L
@@ -51,21 +55,22 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
     private fun exibirDialogAdicionarTipo() {
         val dialogView = layoutInflater.inflate(R.layout.activity_formulario_tipo, null)
 
-        val alertDialog = AlertDialog.Builder(this)
+        // Declare uma variável para armazenar o objeto de diálogo
+        var alertDialog: AlertDialog? = null
+
+        alertDialog = AlertDialog.Builder(this)
             .setView(dialogView)
-            .setTitle("Adicionar Tipo de Mercadoria")
-            .setPositiveButton("Salvar") { dialog, which ->
-                // Aqui você pode obter o nome do novo tipo de mercadoria e salvá-lo
-                val editTextTipo = dialogView.findViewById<EditText>(R.id.activity_formulario_tipo_botao_adicionar)
+            .setPositiveButton("Salvar") { _, _ ->
+                val editTextTipo = dialogView.findViewById<Button>(R.id.activity_formulario_tipo_botao_adicionar) // Corrija aqui para obter o EditText
                 val novoTipo = editTextTipo.text.toString()
 
-                // Execute a lógica de salvamento do novo tipo de mercadoria
-                // e adicione-o ao seu produto, se necessário
-
-                // Feche o diálogo
-                dialog.dismiss()
+                // Feche o diálogo usando a variável alertDialog
+                alertDialog?.dismiss()
             }
-            .setNegativeButton("Cancelar", null)
+            .setNegativeButton("Cancelar") { _, _ ->
+                // Se o usuário cancelar, também feche o diálogo usando a variável alertDialog
+                alertDialog?.dismiss()
+            }
             .create()
 
         alertDialog.show()
@@ -90,9 +95,7 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
             }
         }
     }
-    private fun vaiParaCriarTipos(){
 
-    }
 
     private fun preencheCampos(produto: Produto) {
         url = produto.imagem
@@ -104,16 +107,16 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
             .setText(produto.descricao)
         binding.activityFormularioProdutoValor
             .setText(produto.valor.toPlainString())
-//        binding.activityFormularioProdutoTipo1
-//            .setText(produto.tipo1)
-//        binding.activityFormularioProdutoTipo2
-//            .setText(produto.tipo2)
-//        binding.activityFormularioProdutoTipo3
-//            .setText(produto.tipo3)
-//        binding.activityFormularioProdutoTipo4
-//            .setText(produto.tipo4)
-//        binding.activityFormularioProdutoTipo5
-//            .setText(produto.tipo5)
+        tipo.activityFormularioTipoTipo1
+            .setText(produto.tipo1)
+        tipo.activityFormularioTipoTipo2
+            .setText(produto.tipo2)
+        tipo.activityFormularioTipoTipo3
+            .setText(produto.tipo3)
+        tipo.activityFormularioTipoTipo4
+            .setText(produto.tipo4)
+        tipo.activityFormularioTipoTipo5
+            .setText(produto.tipo5)
 
     }
 
@@ -136,16 +139,6 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
         val nome = campoNome.text.toString()
         val campoDescricao = binding.activityFormularioProdutoDescricao
         val descricao = campoDescricao.text.toString()
-//        val campoTipo1 = binding.activityFormularioProdutoTipo1
-//        val tipo1 = campoTipo1.text.toString()
-//        val campoTipo2 = binding.activityFormularioProdutoTipo2
-//        val tipo2 = campoTipo2.text.toString()
-//        val campoTipo3 = binding.activityFormularioProdutoTipo3
-//        val tipo3 = campoTipo3.text.toString()
-//        val campoTipo4 = binding.activityFormularioProdutoTipo4
-//        val tipo4 = campoTipo4.text.toString()
-//        val campoTipo5 = binding.activityFormularioProdutoTipo5
-//        val tipo5 = campoTipo5.text.toString()
         val campoValor = binding.activityFormularioProdutoValor
         val valorEmTexto = campoValor.text.toString()
         val valor = if (valorEmTexto.isBlank()) {
@@ -153,6 +146,17 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
         } else {
             BigDecimal(valorEmTexto)
         }
+        val campoTipo1 = tipo.activityFormularioTipoTipo1
+        val tipo1 = campoTipo1.text.toString()
+        val campoTipo2 = tipo.activityFormularioTipoTipo2
+        val tipo2 = campoTipo2.text.toString()
+        val campoTipo3 = tipo.activityFormularioTipoTipo3
+        val tipo3 = campoTipo3.text.toString()
+        val campoTipo4 = tipo.activityFormularioTipoTipo4
+        val tipo4 = campoTipo4.text.toString()
+        val campoTipo5 = tipo.activityFormularioTipoTipo5
+        val tipo5 = campoTipo5.text.toString()
+        val tipos = mutableListOf<String>()
 
         return Produto(
             id = produtoId,
@@ -161,14 +165,20 @@ class FormularioProdutoActivity : UsuarioBaseActivity() {
             valor = valor,
             imagem = url,
             usuarioId = usuarioId,
+            tipo1 = tipo1,
+            tipo2 = tipo2,
+            tipo3 = tipo3,
+            tipo4 = tipo4,
+            tipo5 = tipo5,
+        )
+
+    }
+
+}
+
 
 //            tipo1 = tipo1,
 //            tipo2 = tipo2,
 //            tipo3 = tipo3,
 //            tipo4 = tipo4,
 //            tipo5 = tipo5
-
-        )
-    }
-
-}

@@ -16,6 +16,7 @@ import br.com.alura.TestePrototipo.model.Produto
 import br.com.alura.TestePrototipo.ui.activity.CHAVE_PRODUTO_ID
 import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityDetalhesProdutoBinding
+import br.com.alura.orgs.databinding.ActivityFormularioTipoBinding
 import kotlinx.coroutines.launch
 
 class DetalhesProdutoActivity : AppCompatActivity() {
@@ -25,6 +26,7 @@ class DetalhesProdutoActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityDetalhesProdutoBinding.inflate(layoutInflater)
     }
+
     private val produtoDao by lazy {
         AppDatabase.instancia(this).produtoDao()
     }
@@ -97,43 +99,43 @@ class DetalhesProdutoActivity : AppCompatActivity() {
             activityDetalhesProdutoDescricao.text = produtoCarregado.descricao
             activityDetalhesProdutoValor.text = produtoCarregado.valor.formataParaMoedaBrasileira()
 
+            if (!produtoCarregado.tipo1.isNullOrEmpty()){
+                activityDetalhesProdutoTipo1.text = produtoCarregado.tipo1
+                activityDetalhesProdutoTipo1.visibility = View.VISIBLE
+            }else{
+                activityDetalhesProdutoTipo1.visibility = View.GONE
+            }
+
+            if (!produtoCarregado.tipo2.isNullOrEmpty()){
+                activityDetalhesProdutoTipo2.text = produtoCarregado.tipo2
+                activityDetalhesProdutoTipo2.visibility = View.VISIBLE
+            }else{
+                activityDetalhesProdutoTipo2.visibility = View.GONE
+            }
+
+            if (!produtoCarregado.tipo3.isNullOrEmpty()) {
+                activityDetalhesProdutoTipo3.text = produtoCarregado.tipo3
+                activityDetalhesProdutoTipo3.visibility = View.VISIBLE
+            } else {
+                activityDetalhesProdutoTipo3.visibility = View.GONE
+            }
+
+            if (!produtoCarregado.tipo4.isNullOrEmpty()){
+                activityDetalhesProdutoTipo4.text = produtoCarregado.tipo4
+                activityDetalhesProdutoTipo4.visibility = View.VISIBLE
+            }else{
+                activityDetalhesProdutoTipo4.visibility = View.GONE
+            }
+
+            if (!produtoCarregado.tipo5.isNullOrEmpty()){
+                activityDetalhesProdutoTipo5.text = produtoCarregado.tipo5
+                activityDetalhesProdutoTipo5.visibility = View.VISIBLE
+            }else{
+                activityDetalhesProdutoTipo5.visibility = View.GONE
+            }
 
         }
     }
 
 }
-//            Formata para quando o campo estiver vazio sumir
-//            if (!produtoCarregado.tipo1.isNullOrEmpty()){
-//                activityDetalhesProdutoTipo1.text = produtoCarregado.tipo1
-//                activityDetalhesProdutoTipo1.visibility = View.VISIBLE
-//            }else{
-//                activityDetalhesProdutoTipo1.visibility = View.GONE
-//            }
-//
-//            if (!produtoCarregado.tipo2.isNullOrEmpty()){
-//                activityDetalhesProdutoTipo2.text = produtoCarregado.tipo2
-//                activityDetalhesProdutoTipo2.visibility = View.VISIBLE
-//            }else{
-//                activityDetalhesProdutoTipo2.visibility = View.GONE
-//            }
-//
-//            if (!produtoCarregado.tipo3.isNullOrEmpty()) {
-//                activityDetalhesProdutoTipo3.text = produtoCarregado.tipo3
-//                activityDetalhesProdutoTipo3.visibility = View.VISIBLE
-//            } else {
-//                activityDetalhesProdutoTipo3.visibility = View.GONE
-//            }
-//
-//            if (!produtoCarregado.tipo4.isNullOrEmpty()){
-//                activityDetalhesProdutoTipo4.text = produtoCarregado.tipo4
-//                activityDetalhesProdutoTipo4.visibility = View.VISIBLE
-//            }else{
-//                activityDetalhesProdutoTipo4.visibility = View.GONE
-//            }
-//
-//            if (!produtoCarregado.tipo5.isNullOrEmpty()){
-//                activityDetalhesProdutoTipo5.text = produtoCarregado.tipo5
-//                activityDetalhesProdutoTipo5.visibility = View.VISIBLE
-//            }else{
-//                activityDetalhesProdutoTipo5.visibility = View.GONE
-//            }
+

@@ -80,5 +80,3 @@ val MIGRATION_5_6 = object : Migration(4, 5) {
 //        database.execSQL("DROP TABLE IF EXISTS `Cliente`")
     }
 }
-
-

@@ -10,7 +10,5 @@ import java.math.BigDecimal
 @Parcelize
 data class Tipo(
     @PrimaryKey(autoGenerate = true)
-    val id: Long,
-    val tipo: String,
-    val descricao: String,
+    val tipoId: String,
 ) : Parcelable

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.TestePrototipo.model.Produto
 import br.com.alura.orgs.databinding.ProdutoItemBinding
+import br.com.alura.orgs.databinding.TipoItemBinding
 
 class ListaProdutosAdapter(
     private val context: Context,
@@ -14,6 +15,7 @@ class ListaProdutosAdapter(
 ) : RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
 
     private val produtos = produtos.toMutableList()
+
 
     inner class ViewHolder(private val binding: ProdutoItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -36,30 +38,8 @@ class ListaProdutosAdapter(
             descricao.text = produto.descricao
             val id = binding.produtoItemId
             id.text = produto.id.toString()
-//            val tipo1 = binding.produtoItemTipo
-//            tipo1.text = produto.tipo1
-//            val tipo2 = binding.produtoItemTipo
-//            tipo2.text = produto.tipo2
-//            val tipo3 = binding.produtoItemTipo
-//            tipo3.text = produto.tipo3
-//            val tipo4 = binding.produtoItemTipo
-//            tipo4.text = produto.tipo4
-//            val tipo5 = binding.produtoItemTipo
-//            tipo5.text = produto.tipo5
-//            val valor = binding.produtoItemValor
-//            val valorEmMoeda: String = produto.valor
-//                .formataParaMoedaBrasileira()
-//            valor.text = valorEmMoeda
-//
-//            val visibilidade = if (produto.imagem != null) {
-//                View.VISIBLE
-//            } else {
-//                View.GONE
-//            }
-//
-//            binding.imageView.visibility = visibilidade
-//
-//            binding.imageView.tentaCarregarImagem(produto.imagem)
+
+
         }
 
 
@@ -85,3 +65,29 @@ class ListaProdutosAdapter(
     }
 
 }
+
+//            val valor = binding.produtoItemValor
+//            val valorEmMoeda: String = produto.valor
+//                .formataParaMoedaBrasileira()
+//            valor.text = valorEmMoeda
+//
+//            val visibilidade = if (produto.imagem != null) {
+//                View.VISIBLE
+//            } else {
+//                View.GONE
+//            }
+//
+//            binding.imageView.visibility = visibilidade
+//
+//            binding.imageView.tentaCarregarImagem(produto.imagem)
+
+//val tipo1 = tipo.produtoItemTipo
+//            tipo1.text = produto.tipo1
+//            val tipo2 = tipo.produtoItemTipo
+//            tipo2.text = tipo.tipo2
+//            val tipo3 = tipo.produtoItemTipo
+//            tipo3.text = produto.tipo3
+//            val tipo4 = tipo.produtoItemTipo
+//            tipo4.text = produto.tipo4
+//            val tipo5 = tipo.produtoItemTipo
+//            tipo5.text = produto.tipo5

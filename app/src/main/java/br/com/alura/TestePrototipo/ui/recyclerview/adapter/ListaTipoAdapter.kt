@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.alura.TestePrototipo.model.Produto
 import br.com.alura.TestePrototipo.model.Tipo
 import br.com.alura.orgs.databinding.TipoItemBinding
 
@@ -31,7 +32,6 @@ class ListaTipoAdapter(
 
         fun vincula(tipo: Tipo) {
             this.tipo = tipo
-            val nome = binding.tipoItemNome
 
         }
 
@@ -51,10 +51,12 @@ class ListaTipoAdapter(
 
     override fun getItemCount(): Int = tipos.size
 
-    fun atualiza(tipos: List<Tipo>) {
+    fun atualiza(produtos: List<Produto>) {
         this.tipos.clear()
         this.tipos.addAll(tipos)
         notifyDataSetChanged()
     }
+
+
 
 }

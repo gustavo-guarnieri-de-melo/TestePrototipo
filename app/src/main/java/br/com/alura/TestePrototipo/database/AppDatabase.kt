@@ -36,6 +36,8 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun usuarioDao(): UsuarioDao
 
+//    abstract fun tipoDao(): TipoDao
+
     companion object {
         @Volatile
         private var db: AppDatabase? = null
