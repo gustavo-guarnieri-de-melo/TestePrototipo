@@ -9,10 +9,12 @@ import br.com.alura.TestePrototipo.database.converter.Converters
 import br.com.alura.TestePrototipo.database.dao.ClienteDao
 import br.com.alura.TestePrototipo.database.dao.FornecedorDao
 import br.com.alura.TestePrototipo.database.dao.ProdutoDao
+import br.com.alura.TestePrototipo.database.dao.TipoDao
 import br.com.alura.TestePrototipo.database.dao.UsuarioDao
 import br.com.alura.TestePrototipo.model.Cliente
 import br.com.alura.TestePrototipo.model.Fornecedor
 import br.com.alura.TestePrototipo.model.Produto
+import br.com.alura.TestePrototipo.model.Tipo
 import br.com.alura.TestePrototipo.model.Usuario
 
 @Database(
@@ -20,7 +22,8 @@ import br.com.alura.TestePrototipo.model.Usuario
         Cliente::class,
         Produto::class,
         Usuario::class,
-        Fornecedor::class
+        Fornecedor::class,
+        Tipo::class
     ],
     version = 6,
     exportSchema = true
@@ -28,15 +31,16 @@ import br.com.alura.TestePrototipo.model.Usuario
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
+    abstract fun tipoDao():TipoDao
 
     abstract fun clienteDao(): ClienteDao
+
     abstract fun fornecedorDao(): FornecedorDao
 
     abstract fun produtoDao(): ProdutoDao
 
     abstract fun usuarioDao(): UsuarioDao
 
-//    abstract fun tipoDao(): TipoDao
 
     companion object {
         @Volatile

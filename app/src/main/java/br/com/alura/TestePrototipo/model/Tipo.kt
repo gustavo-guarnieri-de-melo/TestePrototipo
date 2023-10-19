@@ -7,8 +7,9 @@ import kotlinx.parcelize.Parcelize
 import java.math.BigDecimal
 
 @Entity
-@Parcelize
 data class Tipo(
-    @PrimaryKey(autoGenerate = true)
-    val tipoId: String,
-) : Parcelable
+    @PrimaryKey (autoGenerate = true)
+    val tipoId: Int,
+    val tipo: String,
+    val produtoId: String
+)

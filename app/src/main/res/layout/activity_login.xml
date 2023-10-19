@@ -13,14 +13,14 @@
 
         <ImageView
             android:id="@+id/activity_login_imagem_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="251dp"
+            android:layout_width="377dp"
+            android:layout_height="242dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.075"
+            app:layout_constraintVertical_bias="0.059"
             app:srcCompat="@drawable/itech" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -89,7 +89,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/activity_login_botao_entrar"
             app:layout_constraintTop_toBottomOf="@+id/activity_login_botao_entrar"
-            app:layout_constraintVertical_bias="0.115" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

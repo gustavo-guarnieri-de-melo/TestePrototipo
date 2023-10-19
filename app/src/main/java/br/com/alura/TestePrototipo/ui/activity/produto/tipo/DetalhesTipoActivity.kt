@@ -16,7 +16,7 @@ import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ActivityDetalhesProdutoBinding
 import kotlinx.coroutines.launch
 
-class DetalhesProdutoActivity : AppCompatActivity() {
+class DetalhesTipoActivity : AppCompatActivity() {
 
     private var produtoId: Long = 0L
     private var produto: Produto? = null
@@ -41,6 +41,7 @@ class DetalhesProdutoActivity : AppCompatActivity() {
 
 
     }
+
 
     override fun onResume() {
         super.onResume()
@@ -74,6 +75,7 @@ class DetalhesProdutoActivity : AppCompatActivity() {
                 }
 
             }
+
             R.id.menu_detalhes_produto_editar -> {
                 Intent(this, FormularioProdutoActivity::class.java).apply {
                     putExtra(CHAVE_PRODUTO_ID, produtoId)

@@ -40,22 +40,6 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
         }
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu_lista_cadastros, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.menu_lista_produtos_sair_do_app -> {
-//                lifecycleScope.launch {
-//                    deslogaUsuario()
-//                }
-//            }
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-
     private suspend fun buscaProdutosUsuario(usuarioId: String) {
         produtoDao.buscaTodosDoUsuario(usuarioId).collect { produtos ->
             adapter.atualiza(produtos)
@@ -89,5 +73,21 @@ class ListaProdutosActivity : UsuarioBaseActivity() {
             startActivity(intent)
         }
     }
-
 }
+
+
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu_lista_cadastros, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.menu_lista_produtos_sair_do_app -> {
+//                lifecycleScope.launch {
+//                    deslogaUsuario()
+//                }
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }

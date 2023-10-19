@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 6,
-    "identityHash": "f6ba045716d16a22b801819e23b12cd8",
+    "identityHash": "48c18b5c52c5d131de012d597fac8ba0",
     "entities": [
       {
         "tableName": "Cliente",
@@ -62,7 +62,7 @@
       },
       {
         "tableName": "Produto",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `valor` REAL NOT NULL, `tipo1` TEXT NOT NULL, `tipo2` TEXT NOT NULL, `tipo3` TEXT NOT NULL, `tipo4` TEXT NOT NULL, `tipo5` TEXT NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `descricao` TEXT NOT NULL, `valor` REAL NOT NULL, `tipo1` TEXT NOT NULL, `imagem` TEXT, `usuarioId` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -91,30 +91,6 @@
           {
             "fieldPath": "tipo1",
             "columnName": "tipo1",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "tipo2",
-            "columnName": "tipo2",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "tipo3",
-            "columnName": "tipo3",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "tipo4",
-            "columnName": "tipo4",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "tipo5",
-            "columnName": "tipo5",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -227,12 +203,44 @@
         },
         "indices": [],
         "foreignKeys": []
+      },
+      {
+        "tableName": "Tipo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tipoId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipo` TEXT NOT NULL, `produtoId` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "tipoId",
+            "columnName": "tipoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "produtoId",
+            "columnName": "produtoId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "tipoId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f6ba045716d16a22b801819e23b12cd8')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '48c18b5c52c5d131de012d597fac8ba0')"
     ]
   }
 }
